@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>MasterMind</title>
+		<!-- Meta smartphone -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<!-- Meta region -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Content-Type" content="UTF-8">
+		<meta name="Geography" content="France">
+		<meta name="Content-Language" content="fr">
+		<!-- signature -->
+		<meta name="Copyright" content="Devynck nicolas">
+		<meta name="Author" content="Devynck nicolas">
+		<!-- Reset CSS -->
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- JQuery -->
+		<script src="JQuery/jquery-2.1.4.js"></script>
+		<!-- JQuery UI -->
+		<script src="JQuery/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.structure.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.theme.min.css">
+		<!-- JQuery Mobile -->
+		<script src="JQuery/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.structure-1.4.5.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.theme-1.4.5.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.inline-svg-1.4.5.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.inline-png-1.4.5.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.icons-1.4.5.min.css">
+		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.external-png-1.4.5.min.css">
+		<!-- RainyDay -->
+		<script src="js/rainyday.min.js"></script>
+		<script>
+		function run() {
+				var rainyDay = new RainyDay({
+						image: 'background' // Target p element with ID, RainyDay.js will use backgorund image to simulate rain effects.
+				});
+		}
+		</script>
+		<!-- Fav icon -->
+		<link rel="icon" type="image/png" href="img/logo.png" />
+		<!-- CSS MasterMind -->
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<!-- Page Accueil -->
+		<div data-role="page" id="accueil">
+			<div data-role="header" data-position="fixed"><h1>MasterMind</h1></div>
+			<div data-role="content">
+				<img class="logo" src="img/logo.png" alt="logo" />
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#jeu" data-role="button" data-icon="grid" data-iconpos="top" data-iconshadow="true" data-transition="flip">Nouvelle partie</a></li>
+						<li><a href="#scores" data-role="button" data-icon="star" data-iconpos="top" data-iconshadow="true" data-transition="turn">High Score</a></li>
+						<li><a href="#regle" data-role="button" data-icon="info" data-iconpos="top" data-iconshadow="true" data-transition="pop">Regle du jeu</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Page Regle -->
+		<div data-role="page" id="regle">
+			<div data-role="header" data-position="fixed"><h1>Règle du jeu</h1></div>
+			<div data-role="content">
+				L'ordinateur choisi une combinaison aléatoire de 4 pions parmi huit couleurs proposées. Le but du jeu ? les retrouver !<br /><br />
+				Déplacez les pions sur la grille puis vous validez en cliquant sur le bouton. L'ordinateur vous indiquera dans la colonne de gauche si vous avez trouvé quelque chose.<br /><br />
+				Un pion <span style="background-color:black;"></span>
+				signifie qu'un des pions proposés est à sa place, un pion <span style="background-color:red;"></span>
+				signifie qu'un des pions proposés existe dans la solution mais n'est pas à sa place.
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#accueil" data-role="button" data-icon="back" data-iconpos="top" data-iconshadow="true" data-transition="slide">Retour au menu</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Page Scores -->
+		<div data-role="page" id="scores">
+			<div data-role="header" data-position="fixed"><h1>High Score</h1></div>
+			<div data-role="content">
+				<div class="ui-grid-b">
+					<div class="ui-block-a"><h2>Coups</h2></div>
+					<div class="ui-block-b"><h2>Temps</h2></div>
+					<div class="ui-block-c"><h2>Nom</h2></div>
+				</div>
+				<div class="ui-grid-b">
+					<div class="ui-block-a sc">
+						<div id="sc0">1</div>
+						<div id="sc1">2</div>
+						<div id="sc2">3</div>
+						<div id="sc3">4</div>
+						<div id="sc4">5</div>
+						<div id="sc5">6</div>
+						<div id="sc6">7</div>
+						<div id="sc7">8</div>
+						<div id="sc8">9</div>
+						<div id="sc9">10</div>
+					</div>
+					<div class="ui-block-b sc">
+						<div id="tmp0">00:00</div>
+						<div id="tmp1">00:00</div>
+						<div id="tmp2">00:00</div>
+						<div id="tmp3">00:00</div>
+						<div id="tmp4">00:00</div>
+						<div id="tmp5">00:00</div>
+						<div id="tmp6">00:00</div>
+						<div id="tmp7">00:00</div>
+						<div id="tmp8">00:00</div>
+						<div id="tmp9">00:00</div>
+					</div>
+					<div class="ui-block-c sc">
+						<div id="nom0">NA</div>
+						<div id="nom1">NA</div>
+						<div id="nom2">NA</div>
+						<div id="nom3">NA</div>
+						<div id="nom4">NA</div>
+						<div id="nom5">NA</div>
+						<div id="nom6">NA</div>
+						<div id="nom7">NA</div>
+						<div id="nom8">NA</div>
+						<div id="nom9">NA</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#accueil" data-role="button" data-icon="back" data-iconpos="top" data-iconshadow="true" data-transition="slide">Retour au menu</a></li>
+						<li><a href="#" data-role="button" data-icon="alert" data-iconpos="top" data-iconshadow="true">Remise a zero</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Page Jeu -->
+		<div data-role="page" id="jeu">
+			<div data-role="header" data-position="fixed"><h1>Game</h1></div>
+			<div data-role="content">
+				<div id="tms"> Chronomètre 00:00</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<div class="ui-grid-b marge">
+							<div class="ui-block-a none"></div>
+							<div class="ui-block-b" id="l9">10</div>
+							<div class="ui-block-c marge">
+								<div id="a9_0"></div>
+								<div id="a9_1"></div>
+								<div id="a9_2"></div>
+								<div id="a9_3"></div>
+							</div>
+							<div class="ui-block-a" id="red"></div>
+							<div class="ui-block-b" id="l8">9</div>
+							<div class="ui-block-c marge">
+								<div id="a8_0"></div>
+								<div id="a8_1"></div>
+								<div id="a8_2"></div>
+								<div id="a8_3"></div>
+							</div>
+							<div class="ui-block-a" id="yellow"></div>
+							<div class="ui-block-b" id="l7">8</div>
+							<div class="ui-block-c marge">
+								<div id="a7_0"></div>
+								<div id="a7_1"></div>
+								<div id="a7_2"></div>
+								<div id="a7_3"></div>
+							</div>
+							<div class="ui-block-a" id="green"></div>
+							<div class="ui-block-b" id="l6">7</div>
+							<div class="ui-block-c marge">
+								<div id="a6_0"></div>
+								<div id="a6_1"></div>
+								<div id="a6_2"></div>
+								<div id="a6_3"></div>
+							</div>
+							<div class="ui-block-a" id="blue"></div>
+							<div class="ui-block-b" id="l5">6</div>
+							<div class="ui-block-c marge">
+								<div id="a5_0"></div>
+								<div id="a5_1"></div>
+								<div id="a5_2"></div>
+								<div id="a5_3"></div>
+							</div>
+							<div class="ui-block-a" id="purple"></div>
+							<div class="ui-block-b" id="l4">5</div>
+							<div class="ui-block-c marge">
+								<div id="a4_0"></div>
+								<div id="a4_1"></div>
+								<div id="a4_2"></div>
+								<div id="a4_3"></div>
+							</div>
+							<div class="ui-block-a" id="orange"></div>
+							<div class="ui-block-b" id="l3">4</div>
+							<div class="ui-block-c marge">
+								<div id="a3_0"></div>
+								<div id="a3_1"></div>
+								<div id="a3_2"></div>
+								<div id="a3_3"></div>
+							</div>
+							<div class="ui-block-a" id="darkturquoise"></div>
+							<div class="ui-block-b" id="l2">3</div>
+							<div class="ui-block-c marge">
+								<div id="a2_0"></div>
+								<div id="a2_1"></div>
+								<div id="a2_2"></div>
+								<div id="a2_3"></div>
+							</div>
+							<div class="ui-block-a" id="black"></div>
+							<div class="ui-block-b" id="l1">2</div>
+							<div class="ui-block-c marge">
+								<div id="a1_0"></div>
+								<div id="a1_1"></div>
+								<div id="a1_2"></div>
+								<div id="a1_3"></div>
+							</div>
+							<div class="ui-block-a none"></div>
+							<div class="ui-block-b" id="l0">1</div>
+							<div class="ui-block-c marge">
+								<div id="a0_0"></div>
+								<div id="a0_1"></div>
+								<div id="a0_2"></div>
+								<div id="a0_3"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div class="ui-grid-c">
+							<div class="ui-block-a" id="p9_0"></div>
+							<div class="ui-block-b" id="p9_1"></div>
+							<div class="ui-block-c" id="p9_2"></div>
+							<div class="ui-block-d" id="p9_3"></div>
+							<div class="ui-block-a" id="p8_0"></div>
+							<div class="ui-block-b" id="p8_1"></div>
+							<div class="ui-block-c" id="p8_2"></div>
+							<div class="ui-block-d" id="p8_3"></div>
+							<div class="ui-block-a" id="p7_0"></div>
+							<div class="ui-block-b" id="p7_1"></div>
+							<div class="ui-block-c" id="p7_2"></div>
+							<div class="ui-block-d" id="p7_3"></div>
+							<div class="ui-block-a" id="p6_0"></div>
+							<div class="ui-block-b" id="p6_1"></div>
+							<div class="ui-block-c" id="p6_2"></div>
+							<div class="ui-block-d" id="p6_3"></div>
+							<div class="ui-block-a" id="p5_0"></div>
+							<div class="ui-block-b" id="p5_1"></div>
+							<div class="ui-block-c" id="p5_2"></div>
+							<div class="ui-block-d" id="p5_3"></div>
+							<div class="ui-block-a" id="p4_0"></div>
+							<div class="ui-block-b" id="p4_1"></div>
+							<div class="ui-block-c" id="p4_2"></div>
+							<div class="ui-block-d" id="p4_3"></div>
+							<div class="ui-block-a" id="p3_0"></div>
+							<div class="ui-block-b" id="p3_1"></div>
+							<div class="ui-block-c" id="p3_2"></div>
+							<div class="ui-block-d" id="p3_3"></div>
+							<div class="ui-block-a" id="p2_0"></div>
+							<div class="ui-block-b" id="p2_1"></div>
+							<div class="ui-block-c" id="p2_2"></div>
+							<div class="ui-block-d" id="p2_3"></div>
+							<div class="ui-block-a" id="p1_0"></div>
+							<div class="ui-block-b" id="p1_1"></div>
+							<div class="ui-block-c" id="p1_2"></div>
+							<div class="ui-block-d" id="p1_3"></div>
+							<div class="ui-block-a" id="p0_0"></div>
+							<div class="ui-block-b" id="p0_1"></div>
+							<div class="ui-block-c" id="p0_2"></div>
+							<div class="ui-block-d" id="p0_3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#accueil" data-role="button" data-icon="back" data-iconpos="top" data-iconshadow="true" data-transition="slide">Retour au menu</a></li>
+						<li><a href="#perdue" data-role="button" data-icon="eye" data-iconpos="top" data-iconshadow="true" data-transition="flow">Solution</a></li>
+						<li><a href="#" data-role="button" data-icon="check" data-iconpos="top" data-iconshadow="true">Validez</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Page Perdue -->
+		<div data-role="page" id="perdue">
+			<div data-role="header" data-position="fixed"><h1>Game Over</h1></div>
+			<div data-role="content">
+				<div id="background">
+					<div><br />Solution :</div>
+					<div class="ui-grid-c">
+						<div class="ui-block-a" id="go0"></div>
+						<div class="ui-block-b" id="go1"></div>
+						<div class="ui-block-c" id="go2"></div>
+						<div class="ui-block-d" id="go3"></div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#accueil" data-role="button" data-icon="back" data-iconpos="top" data-iconshadow="true" data-transition="slide">Retour au menu</a></li>
+						<li><a href="#jeu" data-role="button" data-icon="grid" data-iconpos="top" data-iconshadow="true" data-transition="flip">Nouvelle partie</a></li>
+						<li><a href="#scores" data-role="button" data-icon="star" data-iconpos="top" data-iconshadow="true" data-transition="turn">High Score</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Page Gagner -->
+		<div data-role="page" id="gagner">
+			<div data-role="header" data-position="fixed"><h1>You Win</h1></div>
+			<div data-role="content">
+				<div></div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#accueil" data-role="button" data-icon="back" data-iconpos="top" data-iconshadow="true" data-transition="slide">Retour au menu</a></li>
+						<li><a href="#jeu" data-role="button" data-icon="grid" data-iconpos="top" data-iconshadow="true" data-transition="flip">Nouvelle partie</a></li>
+						<li><a href="#scores" data-role="button" data-icon="star" data-iconpos="top" data-iconshadow="true" data-transition="turn">High Score</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- JS MasterMind -->
+		<script src="js/index.js"></script>
+		</body>
+</html>
