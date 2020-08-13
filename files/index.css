@@ -115,7 +115,7 @@
 #perdue #background {
 		height: 505px;
 		width: 360px;
-		background-image: url('../img/go.png');
+		background-image: url('go.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 }

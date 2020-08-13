@@ -2,20 +2,17 @@
 <html lang="fr">
 	<head>
 		<title>MasterMind</title>
-		<!-- Meta smartphone -->
-		<meta name="format-detection" content="telephone=no">
-		<meta name="msapplication-tap-highlight" content="no">
+		<!-- Meta Security -->
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
 		<!-- Meta region -->
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="Content-Type" content="UTF-8">
 		<meta name="Geography" content="France">
 		<meta name="Content-Language" content="fr">
 		<!-- signature -->
 		<meta name="Copyright" content="Devynck nicolas">
 		<meta name="Author" content="Devynck nicolas">
-		<!-- Reset CSS -->
-		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<!-- JQuery -->
 		<script src="JQuery/jquery-2.1.4.js"></script>
 		<!-- JQuery UI -->
@@ -34,25 +31,20 @@
 		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.icons-1.4.5.min.css">
 		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.external-png-1.4.5.min.css">
 		<!-- RainyDay -->
-		<script src="js/rainyday.min.js"></script>
-		<script>
-		function run() {
-				var rainyDay = new RainyDay({
-						image: 'background' // Target p element with ID, RainyDay.js will use backgorund image to simulate rain effects.
-				});
-		}
-		</script>
+		<script src="files/rainyday.min.js"></script>
+		<!-- Firewoks -->
+		<script src="files/firworks.js"></script>
 		<!-- Fav icon -->
-		<link rel="icon" type="image/png" href="img/logo.png" />
+		<link rel="icon" type="image/png" href="files/logo.png" />
 		<!-- CSS MasterMind -->
-		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="files/index.css">
 	</head>
 	<body>
 		<!-- Page Accueil -->
 		<div data-role="page" id="accueil">
 			<div data-role="header" data-position="fixed"><h1>MasterMind</h1></div>
 			<div data-role="content">
-				<img class="logo" src="img/logo.png" alt="logo" />
+				<img class="logo" src="files/logo.png" alt="logo" />
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -332,6 +324,6 @@
 		</div>
 
 		<!-- JS MasterMind -->
-		<script src="js/index.js"></script>
+		<script src="files/index.js"></script>
 		</body>
 </html>
