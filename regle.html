@@ -32,18 +32,20 @@
 		<link rel="stylesheet" type="text/css" href="files/index.css">
 	</head>
 	<body>
-		<!-- Page Accueil -->
-		<div data-role="page" id="accueil">
-			<div data-role="header" data-position="fixed"><h1>MasterMind</h1></div>
+		<!-- Page Regle -->
+		<div data-role="page" id="regle">
+			<div data-role="header" data-position="fixed"><h1>Régle du jeu</h1></div>
 			<div data-role="content">
-				<img class="logo" src="files/logo.png" alt="logo" />
+				L'ordinateur choisi une combinaison aléatoire de 4 pions parmi huit couleurs proposées. Le but du jeu ? les retrouver !<br /><br />
+				Déplacez les pions sur la grille puis vous validez en cliquant sur le bouton. L'ordinateur vous indiquera dans la colonne de droit si vous avez trouvé quelque chose.<br /><br />
+				Un pion <span class="tokenRed"></span>
+				signifie qu'un des pions proposés est à sa place, un pion <span class="tokenBlack"></span>
+				signifie qu'un des pions proposés existe dans la solution mais n'est pas à sa place.
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="jeu.html" data-role="button" data-icon="grid" data-iconpos="top" data-iconshadow="true" data-transition="flip">Nouvelle partie</a></li>
-						<li><a href="scores.html" data-role="button" data-icon="star" data-iconpos="top" data-iconshadow="true" data-transition="turn">High Score</a></li>
-						<li><a href="regle.html" data-role="button" data-icon="info" data-iconpos="top" data-iconshadow="true" data-transition="pop">Régle du jeu</a></li>
+						<li class="back"><a href="#accueil" data-role="button" data-icon="back" data-iconpos="top" data-iconshadow="true" data-transition="slide">Retour au menu</a></li>
 					</ul>
 				</div>
 			</div>

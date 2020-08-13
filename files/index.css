@@ -1,16 +1,19 @@
 /* Page Accueil */
 #accueil .logo {
-	height:10px;
-	width:100px;
+	width:100%;
 	margin: auto;
 }
 /* Page Regle */
+#regle {
+	font-size: 20px;
+}
 #regle .tokenRed {background-color:red;}
 #regle .tokenBlack {background-color:black;}
 #regle .tokenRed, #regle .tokenBlack {
 	display:inline-block;
 	width: 18px;
 	height: 18px;
+	margin-bottom: -5px;
 	border-radius:100%;
 	border: 2px inset #AAA;
 }
@@ -64,11 +67,5 @@
 	text-align : center;
 }
 /* page perdue */
-#perdue #background {
-		height: 505px;
-		width: 360px;
-		background-image: url('go.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-}
+
 /* page gagner */

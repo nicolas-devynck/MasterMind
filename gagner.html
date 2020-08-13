@@ -32,23 +32,22 @@
 		<link rel="stylesheet" type="text/css" href="files/index.css">
 	</head>
 	<body>
-		<!-- Page Accueil -->
-		<div data-role="page" id="accueil">
-			<div data-role="header" data-position="fixed"><h1>MasterMind</h1></div>
+		<!-- Page Gagner -->
+		<div data-role="page" id="gagner">
+			<div data-role="header" data-position="fixed"><h1>You Win</h1></div>
 			<div data-role="content">
-				<img class="logo" src="files/logo.png" alt="logo" />
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="jeu.html" data-role="button" data-icon="grid" data-iconpos="top" data-iconshadow="true" data-transition="flip">Nouvelle partie</a></li>
-						<li><a href="scores.html" data-role="button" data-icon="star" data-iconpos="top" data-iconshadow="true" data-transition="turn">High Score</a></li>
-						<li><a href="regle.html" data-role="button" data-icon="info" data-iconpos="top" data-iconshadow="true" data-transition="pop">Régle du jeu</a></li>
+						<li><a href="#accueil" data-role="button" data-icon="back" data-iconpos="top" data-iconshadow="true" data-transition="slide">Retour au menu</a></li>
+						<li><a href="#jeu" data-role="button" data-icon="grid" data-iconpos="top" data-iconshadow="true" data-transition="flip">Nouvelle partie</a></li>
+						<li><a href="#scores" data-role="button" data-icon="star" data-iconpos="top" data-iconshadow="true" data-transition="turn">High Score</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<!-- JS -->
+		<!-- JS MasterMind -->
 		<script src="files/index.js"></script>
-	</body>
+		</body>
 </html>
