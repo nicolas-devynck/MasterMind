@@ -1,115 +1,67 @@
 /* Page Accueil */
 #accueil .logo {
-	margin-left: auto;
-	margin-right: auto;
-	height:60%;
-	width:70%;
-	position: absolute;
-	top: 50%; left: 50%; /* à 50%/50% du parent référent */
-	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+	height:10px;
+	width:100px;
+	margin: auto;
 }
 /* Page Regle */
-#regle span {
+#regle .tokenRed {background-color:red;}
+#regle .tokenBlack {background-color:black;}
+#regle .tokenRed, #regle .tokenBlack {
 	display:inline-block;
+	width: 18px;
+	height: 18px;
 	border-radius:100%;
-	width: 7px;
-	height: 7px;
 	border: 2px inset #AAA;
-}
-/* Page scores */
-#scores h2 {
-	text-align:center;
-	border:1px solid #000;
-	margin:0;
-}
-#scores .sc {
-	text-align:center;
-	font-size: 20px;
-	border-left: 1px solid #000;
-	border-right: 1px solid #000;
-}
-#scores .sc div:nth-child(2n) {
-	background-color:rgba(0,0,0,0.3);
-}
-#scores .sc div:nth-child(10n) {
-	border-bottom: 1px solid #000;
 }
 /* page jeu */
-#jeu #red {	background-color:red;}
-#jeu #yellow {background-color:yellow;}
-#jeu #green {background-color:green;}
-#jeu #blue {background-color:blue;}
-#jeu #purple {background-color:purple;}
-#jeu #orange {background-color:orange;}
-#jeu #darkturquoise {background-color:darkturquoise;}
-#jeu #black {background-color:black;}
-#jeu .none {
-	width:11vw;
-	height:11vw;
-	margin:auto;
+#jeu #red {	background-color:red;margin-left: 10px;}
+#jeu #yellow {background-color:yellow;margin-left: 10px;}
+#jeu #green {background-color:green;margin-left: 10px;}
+#jeu #blue {background-color:blue;margin-left: 10px;}
+#jeu #purple {background-color:purple;margin-left: 10px;}
+#jeu #orange {background-color:orange;margin-left: 10px;}
+#jeu #darkturquoise {background-color:darkturquoise;margin-left: 10px;}
+#jeu #black {background-color:black;margin-left: 10px;}
+#jeu .clear {clear: both;}
+#jeu .numBox {
+	width: 40px;
+    height: 40px;
+	margin: 1px;
+	margin-right: 10px;
+    border: 2px inset #AAA;
+    border-radius: 100%;
+	font-size: 20px;
+	text-align : center;
+	line-height: 40px;
+	float: left;
 }
-#jeu #red, #jeu #yellow, #jeu #green, #jeu #blue, #jeu #purple, #jeu #black, #jeu #orange, #jeu #darkturquoise {
-	width:11vw;
-	height:11vw;
-	margin:auto;
-	border: 2px inset #AAA;
-	border-radius: 100%;
+#jeu .box {
+    width: 40px;
+	height: 40px;
+	margin: 1px;
+	background-color: #999;
+    border: 2px inset #AAA;
+    border-radius: 100%;
+    float: left;
 }
-#jeu #l0, #jeu #l1, #jeu #l2, #jeu #l3, #jeu #l4, #jeu #l5, #jeu #l6, #jeu #l7, #jeu #l8, #jeu #l9 {
-	width:11vw;
-	height:11vw;
-	margin:auto;
-	margin-left:5px;
-	border: 2px inset #AAA;
-	border-radius: 100%;
-	background-color: LightGrey;
-	font-size: 8vw;
-	text-align: center;
+#jeu .content-smallBox {
+    width: 44px;
+	height: 44px;
+	margin-left: 10px;
+    float: left;
 }
-#jeu #a9_0, #jeu #a9_1, #jeu #a9_2, #jeu #a9_3,
-#jeu #a8_0, #jeu #a8_1, #jeu #a8_2, #jeu #a8_3,
-#jeu #a7_0, #jeu #a7_1, #jeu #a7_2, #jeu #a7_3,
-#jeu #a6_0, #jeu #a6_1, #jeu #a6_2, #jeu #a6_3,
-#jeu #a5_0, #jeu #a5_1, #jeu #a5_2, #jeu #a5_3,
-#jeu #a4_0, #jeu #a4_1, #jeu #a4_2, #jeu #a4_3,
-#jeu #a3_0, #jeu #a3_1, #jeu #a3_2, #jeu #a3_3,
-#jeu #a2_0, #jeu #a2_1, #jeu #a2_2, #jeu #a2_3,
-#jeu #a1_0, #jeu #a1_1, #jeu #a1_2, #jeu #a1_3,
-#jeu #a0_0, #jeu #a0_1, #jeu #a0_2, #jeu #a0_3 {
-	float:left;
-	width:4.3vw;
-	height:4.3vw;
-	border: 2px inset #AAA;
-	border-radius: 100%;
-	background-color: LightGrey;
+#jeu .smallBox {
+    width: 18px;
+    height: 18px;
+    border: 2px inset #AAA;
+    border-radius: 100%;
+    float: left;
 }
-#jeu #p9_0, #jeu #p9_1, #jeu #p9_2, #jeu #p9_3,
-#jeu #p8_0, #jeu #p8_1, #jeu #p8_2, #jeu #p8_3,
-#jeu #p7_0, #jeu #p7_1, #jeu #p7_2, #jeu #p7_3,
-#jeu #p6_0, #jeu #p6_1, #jeu #p6_2, #jeu #p6_3,
-#jeu #p5_0, #jeu #p5_1, #jeu #p5_2, #jeu #p5_3,
-#jeu #p4_0, #jeu #p4_1, #jeu #p4_2, #jeu #p4_3,
-#jeu #p3_0, #jeu #p3_1, #jeu #p3_2, #jeu #p3_3,
-#jeu #p2_0, #jeu #p2_1, #jeu #p2_2, #jeu #p2_3,
-#jeu #p1_0, #jeu #p1_1, #jeu #p1_2, #jeu #p1_3,
-#jeu #p0_0, #jeu #p0_1, #jeu #p0_2, #jeu #p0_3 {
-	width:11vw;
-	height:11vw;
-	margin:auto;
-	border: 2px inset #AAA;
-	border-radius: 100%;
-	background-color: LightGrey;
-}
-#jeu .marge {
-	margin-left:15px;
-}
-#jeu #tms {
-	margin:auto;
-	margin-bottom:10px;
-	border: 2px inset #AAA;
-	background-color: LightGrey;
-	font-size: 4.5vw;
-	text-align: center;
+#jeu #chrono {
+	margin-top: 10px;
+    width: 349px;
+	text-align : center;
 }
 /* page perdue */
 #perdue #background {
@@ -118,12 +70,5 @@
 		background-image: url('go.png');
 		background-repeat: no-repeat;
 		background-size: cover;
-}
-#perdue #go0, #perdue #go1, #perdue #go2, #perdue #go3 {
-	width:11vw;
-	height:11vw;
-	margin:auto;
-	border: 2px inset #AAA;
-	border-radius: 100%;
 }
 /* page gagner */

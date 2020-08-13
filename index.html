@@ -62,9 +62,9 @@
 			<div data-role="header" data-position="fixed"><h1>Règle du jeu</h1></div>
 			<div data-role="content">
 				L'ordinateur choisi une combinaison aléatoire de 4 pions parmi huit couleurs proposées. Le but du jeu ? les retrouver !<br /><br />
-				Déplacez les pions sur la grille puis vous validez en cliquant sur le bouton. L'ordinateur vous indiquera dans la colonne de gauche si vous avez trouvé quelque chose.<br /><br />
-				Un pion <span style="background-color:black;"></span>
-				signifie qu'un des pions proposés est à sa place, un pion <span style="background-color:red;"></span>
+				Déplacez les pions sur la grille puis vous validez en cliquant sur le bouton. L'ordinateur vous indiquera dans la colonne de droit si vous avez trouvé quelque chose.<br /><br />
+				Un pion <span class="tokenRed"></span>
+				signifie qu'un des pions proposés est à sa place, un pion <span class="tokenBlack"></span>
 				signifie qu'un des pions proposés existe dans la solution mais n'est pas à sa place.
 			</div>
 			<div data-role="footer" data-position="fixed">
@@ -80,49 +80,7 @@
 		<div data-role="page" id="scores">
 			<div data-role="header" data-position="fixed"><h1>High Score</h1></div>
 			<div data-role="content">
-				<div class="ui-grid-b">
-					<div class="ui-block-a"><h2>Coups</h2></div>
-					<div class="ui-block-b"><h2>Temps</h2></div>
-					<div class="ui-block-c"><h2>Nom</h2></div>
-				</div>
-				<div class="ui-grid-b">
-					<div class="ui-block-a sc">
-						<div id="sc0">1</div>
-						<div id="sc1">2</div>
-						<div id="sc2">3</div>
-						<div id="sc3">4</div>
-						<div id="sc4">5</div>
-						<div id="sc5">6</div>
-						<div id="sc6">7</div>
-						<div id="sc7">8</div>
-						<div id="sc8">9</div>
-						<div id="sc9">10</div>
-					</div>
-					<div class="ui-block-b sc">
-						<div id="tmp0">00:00</div>
-						<div id="tmp1">00:00</div>
-						<div id="tmp2">00:00</div>
-						<div id="tmp3">00:00</div>
-						<div id="tmp4">00:00</div>
-						<div id="tmp5">00:00</div>
-						<div id="tmp6">00:00</div>
-						<div id="tmp7">00:00</div>
-						<div id="tmp8">00:00</div>
-						<div id="tmp9">00:00</div>
-					</div>
-					<div class="ui-block-c sc">
-						<div id="nom0">NA</div>
-						<div id="nom1">NA</div>
-						<div id="nom2">NA</div>
-						<div id="nom3">NA</div>
-						<div id="nom4">NA</div>
-						<div id="nom5">NA</div>
-						<div id="nom6">NA</div>
-						<div id="nom7">NA</div>
-						<div id="nom8">NA</div>
-						<div id="nom9">NA</div>
-					</div>
-				</div>
+			
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -138,137 +96,155 @@
 		<div data-role="page" id="jeu">
 			<div data-role="header" data-position="fixed"><h1>Game</h1></div>
 			<div data-role="content">
-				<div id="tms"> Chronomètre 00:00</div>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<div class="ui-grid-b marge">
-							<div class="ui-block-a none"></div>
-							<div class="ui-block-b" id="l9">10</div>
-							<div class="ui-block-c marge">
-								<div id="a9_0"></div>
-								<div id="a9_1"></div>
-								<div id="a9_2"></div>
-								<div id="a9_3"></div>
-							</div>
-							<div class="ui-block-a" id="red"></div>
-							<div class="ui-block-b" id="l8">9</div>
-							<div class="ui-block-c marge">
-								<div id="a8_0"></div>
-								<div id="a8_1"></div>
-								<div id="a8_2"></div>
-								<div id="a8_3"></div>
-							</div>
-							<div class="ui-block-a" id="yellow"></div>
-							<div class="ui-block-b" id="l7">8</div>
-							<div class="ui-block-c marge">
-								<div id="a7_0"></div>
-								<div id="a7_1"></div>
-								<div id="a7_2"></div>
-								<div id="a7_3"></div>
-							</div>
-							<div class="ui-block-a" id="green"></div>
-							<div class="ui-block-b" id="l6">7</div>
-							<div class="ui-block-c marge">
-								<div id="a6_0"></div>
-								<div id="a6_1"></div>
-								<div id="a6_2"></div>
-								<div id="a6_3"></div>
-							</div>
-							<div class="ui-block-a" id="blue"></div>
-							<div class="ui-block-b" id="l5">6</div>
-							<div class="ui-block-c marge">
-								<div id="a5_0"></div>
-								<div id="a5_1"></div>
-								<div id="a5_2"></div>
-								<div id="a5_3"></div>
-							</div>
-							<div class="ui-block-a" id="purple"></div>
-							<div class="ui-block-b" id="l4">5</div>
-							<div class="ui-block-c marge">
-								<div id="a4_0"></div>
-								<div id="a4_1"></div>
-								<div id="a4_2"></div>
-								<div id="a4_3"></div>
-							</div>
-							<div class="ui-block-a" id="orange"></div>
-							<div class="ui-block-b" id="l3">4</div>
-							<div class="ui-block-c marge">
-								<div id="a3_0"></div>
-								<div id="a3_1"></div>
-								<div id="a3_2"></div>
-								<div id="a3_3"></div>
-							</div>
-							<div class="ui-block-a" id="darkturquoise"></div>
-							<div class="ui-block-b" id="l2">3</div>
-							<div class="ui-block-c marge">
-								<div id="a2_0"></div>
-								<div id="a2_1"></div>
-								<div id="a2_2"></div>
-								<div id="a2_3"></div>
-							</div>
-							<div class="ui-block-a" id="black"></div>
-							<div class="ui-block-b" id="l1">2</div>
-							<div class="ui-block-c marge">
-								<div id="a1_0"></div>
-								<div id="a1_1"></div>
-								<div id="a1_2"></div>
-								<div id="a1_3"></div>
-							</div>
-							<div class="ui-block-a none"></div>
-							<div class="ui-block-b" id="l0">1</div>
-							<div class="ui-block-c marge">
-								<div id="a0_0"></div>
-								<div id="a0_1"></div>
-								<div id="a0_2"></div>
-								<div id="a0_3"></div>
-							</div>
-						</div>
+				<div id="9">
+					<div class="numBox">10</div>
+					<div id="a9-1" class="box"></div>
+					<div id="a9-2" class="box"></div>
+					<div id="a9-3" class="box"></div>
+					<div id="a9-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b9-1" class="smallBox"></div>
+					  <div id="b9-2" class="smallBox"></div>
+					  <div id="b9-3" class="smallBox"></div>
+					  <div id="b9-4" class="smallBox"></div>
 					</div>
-					<div class="ui-block-b">
-						<div class="ui-grid-c">
-							<div class="ui-block-a" id="p9_0"></div>
-							<div class="ui-block-b" id="p9_1"></div>
-							<div class="ui-block-c" id="p9_2"></div>
-							<div class="ui-block-d" id="p9_3"></div>
-							<div class="ui-block-a" id="p8_0"></div>
-							<div class="ui-block-b" id="p8_1"></div>
-							<div class="ui-block-c" id="p8_2"></div>
-							<div class="ui-block-d" id="p8_3"></div>
-							<div class="ui-block-a" id="p7_0"></div>
-							<div class="ui-block-b" id="p7_1"></div>
-							<div class="ui-block-c" id="p7_2"></div>
-							<div class="ui-block-d" id="p7_3"></div>
-							<div class="ui-block-a" id="p6_0"></div>
-							<div class="ui-block-b" id="p6_1"></div>
-							<div class="ui-block-c" id="p6_2"></div>
-							<div class="ui-block-d" id="p6_3"></div>
-							<div class="ui-block-a" id="p5_0"></div>
-							<div class="ui-block-b" id="p5_1"></div>
-							<div class="ui-block-c" id="p5_2"></div>
-							<div class="ui-block-d" id="p5_3"></div>
-							<div class="ui-block-a" id="p4_0"></div>
-							<div class="ui-block-b" id="p4_1"></div>
-							<div class="ui-block-c" id="p4_2"></div>
-							<div class="ui-block-d" id="p4_3"></div>
-							<div class="ui-block-a" id="p3_0"></div>
-							<div class="ui-block-b" id="p3_1"></div>
-							<div class="ui-block-c" id="p3_2"></div>
-							<div class="ui-block-d" id="p3_3"></div>
-							<div class="ui-block-a" id="p2_0"></div>
-							<div class="ui-block-b" id="p2_1"></div>
-							<div class="ui-block-c" id="p2_2"></div>
-							<div class="ui-block-d" id="p2_3"></div>
-							<div class="ui-block-a" id="p1_0"></div>
-							<div class="ui-block-b" id="p1_1"></div>
-							<div class="ui-block-c" id="p1_2"></div>
-							<div class="ui-block-d" id="p1_3"></div>
-							<div class="ui-block-a" id="p0_0"></div>
-							<div class="ui-block-b" id="p0_1"></div>
-							<div class="ui-block-c" id="p0_2"></div>
-							<div class="ui-block-d" id="p0_3"></div>
-						</div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="8">
+					<div class="numBox">9</div>
+					<div id="a8-1" class="box"></div>
+					<div id="a8-2" class="box"></div>
+					<div id="a8-3" class="box"></div>
+					<div id="a8-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b8-1" class="smallBox"></div>
+					  <div id="b8-2" class="smallBox"></div>
+					  <div id="b8-3" class="smallBox"></div>
+					  <div id="b8-4" class="smallBox"></div>
 					</div>
-				</div>
+					<div id="red" class="box"></div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="7">
+					<div class="numBox">8</div>
+					<div id="a7-1" class="box"></div>
+					<div id="a7-2" class="box"></div>
+					<div id="a7-3" class="box"></div>
+					<div id="a7-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b7-1" class="smallBox"></div>
+					  <div id="b7-2" class="smallBox"></div>
+					  <div id="b7-3" class="smallBox"></div>
+					  <div id="b7-4" class="smallBox"></div>
+					</div>
+					<div id="yellow" class="box"></div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="6">
+					<div class="numBox">7</div>
+					<div id="a6-1" class="box"></div>
+					<div id="a6-2" class="box"></div>
+					<div id="a6-3" class="box"></div>
+					<div id="a6-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b6-1" class="smallBox"></div>
+					  <div id="b6-2" class="smallBox"></div>
+					  <div id="b6-3" class="smallBox"></div>
+					  <div id="b6-4" class="smallBox"></div>
+					</div>
+					<div id="green" class="box"></div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="5">
+					<div class="numBox">6</div>
+					<div id="a5-1" class="box"></div>
+					<div id="a5-2" class="box"></div>
+					<div id="a5-3" class="box"></div>
+					<div id="a5-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b5-1" class="smallBox"></div>
+					  <div id="b5-2" class="smallBox"></div>
+					  <div id="b5-3" class="smallBox"></div>
+					  <div id="b5-4" class="smallBox"></div>
+					</div>
+					<div id="blue" class="box"></div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="4">
+					<div class="numBox">5</div>
+					<div id="a4-1" class="box"></div>
+					<div id="a4-2" class="box"></div>
+					<div id="a4-3" class="box"></div>
+					<div id="a4-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b4-1" class="smallBox"></div>
+					  <div id="b4-2" class="smallBox"></div>
+					  <div id="b4-3" class="smallBox"></div>
+					  <div id="b4-4" class="smallBox"></div>
+					</div>
+					<div id="purple" class="box"></div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="3">
+					<div class="numBox">4</div>
+					<div id="a3-1" class="box"></div>
+					<div id="a3-2" class="box"></div>
+					<div id="a3-3" class="box"></div>
+					<div id="a3-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b3-1" class="smallBox"></div>
+					  <div id="b3-2" class="smallBox"></div>
+					  <div id="b3-3" class="smallBox"></div>
+					  <div id="b3-4" class="smallBox"></div>
+					</div>
+					<div id="orange" class="box"></div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="2">
+					<div class="numBox">3</div>
+					<div id="a2-1" class="box"></div>
+					<div id="a2-2" class="box"></div>
+					<div id="a2-3" class="box"></div>
+					<div id="a2-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b2-1" class="smallBox"></div>
+					  <div id="b2-2" class="smallBox"></div>
+					  <div id="b2-3" class="smallBox"></div>
+					  <div id="b2-4" class="smallBox"></div>
+					</div>
+					<div id="darkturquoise" class="box"></div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="1">
+					<div class="numBox">2</div>
+					<div id="a1-1" class="box"></div>
+					<div id="a1-2" class="box"></div>
+					<div id="a1-3" class="box"></div>
+					<div id="a1-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b1-1" class="smallBox"></div>
+					  <div id="b1-2" class="smallBox"></div>
+					  <div id="b1-3" class="smallBox"></div>
+					  <div id="b1-4" class="smallBox"></div>
+					</div>
+					<div id="black" class="box"></div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="0">
+					<div class="numBox">1</div>
+					<div id="a0-1" class="box"></div>
+					<div id="a0-2" class="box"></div>
+					<div id="a0-3" class="box"></div>
+					<div id="a0-4" class="box"></div>
+					<div class="content-smallBox">
+					  <div id="b0-1" class="smallBox"></div>
+					  <div id="b0-2" class="smallBox"></div>
+					  <div id="b0-3" class="smallBox"></div>
+					  <div id="b0-4" class="smallBox"></div>
+					</div>
+					<div class="clear"></div>
+				  </div>
+				  <div id="chrono">Temps : <span>00:00</span></div>
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -286,13 +262,7 @@
 			<div data-role="header" data-position="fixed"><h1>Game Over</h1></div>
 			<div data-role="content">
 				<div id="background">
-					<div><br />Solution :</div>
-					<div class="ui-grid-c">
-						<div class="ui-block-a" id="go0"></div>
-						<div class="ui-block-b" id="go1"></div>
-						<div class="ui-block-c" id="go2"></div>
-						<div class="ui-block-d" id="go3"></div>
-					</div>
+					<div>Solution :</div>
 				</div>
 			</div>
 			<div data-role="footer" data-position="fixed">
@@ -310,7 +280,6 @@
 		<div data-role="page" id="gagner">
 			<div data-role="header" data-position="fixed"><h1>You Win</h1></div>
 			<div data-role="content">
-				<div></div>
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
