@@ -1,3 +1,7 @@
+body {
+	user-select: none;
+    overflow: hidden;
+}
 /* Page Accueil */
 #accueil .logo {
 	width:100%;
@@ -32,7 +36,8 @@
     height: 40px;
 	margin: 1px;
 	margin-right: 10px;
-    border: 2px inset #AAA;
+	border: 2px inset #AAA;
+	background-color: #E9E9E9;
     border-radius: 100%;
 	font-size: 20px;
 	text-align : center;
@@ -43,7 +48,7 @@
     width: 40px;
 	height: 40px;
 	margin: 1px;
-	background-color: #999;
+	background-color: #E9E9E9;
     border: 2px inset #AAA;
     border-radius: 100%;
     float: left;
@@ -56,7 +61,8 @@
 }
 #jeu .smallBox {
     width: 18px;
-    height: 18px;
+	height: 18px;
+	background-color: #E9E9E9;
     border: 2px inset #AAA;
     border-radius: 100%;
     float: left;
