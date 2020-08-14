@@ -19,182 +19,165 @@
 		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.min.css">
 		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.structure.min.css">
 		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.theme.min.css">
-		<!-- JQuery Mobile -->
-		<script src="JQuery/jquery.mobile-1.4.5.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.structure-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.theme-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.inline-svg-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.inline-png-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.icons-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.external-png-1.4.5.min.css">
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="files/index.css">
 	</head>
 	<body>
 		<!-- Page Jeu -->
-		<div data-role="page" id="jeu">
-			<div data-role="header" data-position="fixed"><h1>MasterMind</h1></div>
-			<div data-role="content">
-				<div id="z9">
-					<div class="numBox">10</div>
-					<div id="a9-0" class="box"></div>
-					<div id="a9-1" class="box"></div>
-					<div id="a9-2" class="box"></div>
-					<div id="a9-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b9-0" class="smallBox"></div>
-						<div id="b9-1" class="smallBox"></div>
-						<div id="b9-2" class="smallBox"></div>
-						<div id="b9-3" class="smallBox"></div>
-					</div>
-					<div class="clear"></div>
+		<div id="jeu">
+			<h1>MasterMind</h1>
+			<div id="z9">
+				<div class="numBox">10</div>
+				<div id="a9-0" class="box"></div>
+				<div id="a9-1" class="box"></div>
+				<div id="a9-2" class="box"></div>
+				<div id="a9-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b9-0" class="smallBox"></div>
+					<div id="b9-1" class="smallBox"></div>
+					<div id="b9-2" class="smallBox"></div>
+					<div id="b9-3" class="smallBox"></div>
 				</div>
-				<div id="z8">
-					<div class="numBox">9</div>
-					<div id="a8-0" class="box"></div>
-					<div id="a8-1" class="box"></div>
-					<div id="a8-2" class="box"></div>
-					<div id="a8-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b8-0" class="smallBox"></div>
-						<div id="b8-1" class="smallBox"></div>
-						<div id="b8-2" class="smallBox"></div>
-						<div id="b8-3" class="smallBox"></div>
-					</div>
-					<div id="red" class="box"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="z7">
-					<div class="numBox">8</div>
-					<div id="a7-0" class="box"></div>
-					<div id="a7-1" class="box"></div>
-					<div id="a7-2" class="box"></div>
-					<div id="a7-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b7-0" class="smallBox"></div>
-						<div id="b7-1" class="smallBox"></div>
-						<div id="b7-2" class="smallBox"></div>
-						<div id="b7-3" class="smallBox"></div>
-					</div>
-					<div id="yellow" class="box"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="z6">
-					<div class="numBox">7</div>
-					<div id="a6-0" class="box"></div>
-					<div id="a6-1" class="box"></div>
-					<div id="a6-2" class="box"></div>
-					<div id="a6-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b6-0" class="smallBox"></div>
-						<div id="b6-1" class="smallBox"></div>
-						<div id="b6-2" class="smallBox"></div>
-						<div id="b6-3" class="smallBox"></div>
-					</div>
-					<div id="green" class="box"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="z5">
-					<div class="numBox">6</div>
-					<div id="a5-0" class="box"></div>
-					<div id="a5-1" class="box"></div>
-					<div id="a5-2" class="box"></div>
-					<div id="a5-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b5-0" class="smallBox"></div>
-						<div id="b5-1" class="smallBox"></div>
-						<div id="b5-2" class="smallBox"></div>
-						<div id="b5-3" class="smallBox"></div>
-					</div>
-					<div id="blue" class="box"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="z4">
-					<div class="numBox">5</div>
-					<div id="a4-0" class="box"></div>
-					<div id="a4-1" class="box"></div>
-					<div id="a4-2" class="box"></div>
-					<div id="a4-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b4-0" class="smallBox"></div>
-						<div id="b4-1" class="smallBox"></div>
-						<div id="b4-2" class="smallBox"></div>
-						<div id="b4-3" class="smallBox"></div>
-					</div>
-					<div id="purple" class="box"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="z3">
-					<div class="numBox">4</div>
-					<div id="a3-0" class="box"></div>
-					<div id="a3-1" class="box"></div>
-					<div id="a3-2" class="box"></div>
-					<div id="a3-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b3-0" class="smallBox"></div>
-						<div id="b3-1" class="smallBox"></div>
-						<div id="b3-2" class="smallBox"></div>
-						<div id="b3-3" class="smallBox"></div>
-					</div>
-					<div id="orange" class="box"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="z2">
-					<div class="numBox">3</div>
-					<div id="a2-0" class="box"></div>
-					<div id="a2-1" class="box"></div>
-					<div id="a2-2" class="box"></div>
-					<div id="a2-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b2-0" class="smallBox"></div>
-						<div id="b2-1" class="smallBox"></div>
-						<div id="b2-2" class="smallBox"></div>
-						<div id="b2-3" class="smallBox"></div>
-					</div>
-					<div id="darkturquoise" class="box"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="z1">
-					<div class="numBox">2</div>
-					<div id="a1-0" class="box"></div>
-					<div id="a1-1" class="box"></div>
-					<div id="a1-2" class="box"></div>
-					<div id="a1-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b1-0" class="smallBox"></div>
-						<div id="b1-1" class="smallBox"></div>
-						<div id="b1-2" class="smallBox"></div>
-						<div id="b1-3" class="smallBox"></div>
-					</div>
-					<div id="black" class="box"></div>
-					<div class="clear"></div>
-				</div>
-				<div id="z0">
-					<div class="numBox">1</div>
-					<div id="a0-0" class="box"></div>
-					<div id="a0-1" class="box"></div>
-					<div id="a0-2" class="box"></div>
-					<div id="a0-3" class="box"></div>
-					<div class="content-smallBox">
-						<div id="b0-0" class="smallBox"></div>
-						<div id="b0-1" class="smallBox"></div>
-						<div id="b0-2" class="smallBox"></div>
-						<div id="b0-3" class="smallBox"></div>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div id="chrono">Temps : <span>00:00</span></div>
+				<div class="clear"></div>
 			</div>
-			<div data-role="footer" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="index.html" data-role="button" data-icon="back" data-iconpos="top" data-iconshadow="true" data-transition="slide">Retour au menu</a></li>
-						<li><a href="perdue.html" data-role="button" data-icon="eye" data-iconpos="top" data-iconshadow="true" data-transition="flow">Solution</a></li>
-						<li><a href="#" data-role="button" data-icon="check" data-iconpos="top" data-iconshadow="true">Validez</a></li>
-					</ul>
+			<div id="z8">
+				<div class="numBox">9</div>
+				<div id="a8-0" class="box"></div>
+				<div id="a8-1" class="box"></div>
+				<div id="a8-2" class="box"></div>
+				<div id="a8-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b8-0" class="smallBox"></div>
+					<div id="b8-1" class="smallBox"></div>
+					<div id="b8-2" class="smallBox"></div>
+					<div id="b8-3" class="smallBox"></div>
 				</div>
+				<div id="red" class="box"></div>
+				<div class="clear"></div>
 			</div>
+			<div id="z7">
+				<div class="numBox">8</div>
+				<div id="a7-0" class="box"></div>
+				<div id="a7-1" class="box"></div>
+				<div id="a7-2" class="box"></div>
+				<div id="a7-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b7-0" class="smallBox"></div>
+					<div id="b7-1" class="smallBox"></div>
+					<div id="b7-2" class="smallBox"></div>
+					<div id="b7-3" class="smallBox"></div>
+				</div>
+				<div id="yellow" class="box"></div>
+				<div class="clear"></div>
+			</div>
+			<div id="z6">
+				<div class="numBox">7</div>
+				<div id="a6-0" class="box"></div>
+				<div id="a6-1" class="box"></div>
+				<div id="a6-2" class="box"></div>
+				<div id="a6-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b6-0" class="smallBox"></div>
+					<div id="b6-1" class="smallBox"></div>
+					<div id="b6-2" class="smallBox"></div>
+					<div id="b6-3" class="smallBox"></div>
+				</div>
+				<div id="green" class="box"></div>
+				<div class="clear"></div>
+			</div>
+			<div id="z5">
+				<div class="numBox">6</div>
+				<div id="a5-0" class="box"></div>
+				<div id="a5-1" class="box"></div>
+				<div id="a5-2" class="box"></div>
+				<div id="a5-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b5-0" class="smallBox"></div>
+					<div id="b5-1" class="smallBox"></div>
+					<div id="b5-2" class="smallBox"></div>
+					<div id="b5-3" class="smallBox"></div>
+				</div>
+				<div id="blue" class="box"></div>
+				<div class="clear"></div>
+			</div>
+			<div id="z4">
+				<div class="numBox">5</div>
+				<div id="a4-0" class="box"></div>
+				<div id="a4-1" class="box"></div>
+				<div id="a4-2" class="box"></div>
+				<div id="a4-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b4-0" class="smallBox"></div>
+					<div id="b4-1" class="smallBox"></div>
+					<div id="b4-2" class="smallBox"></div>
+					<div id="b4-3" class="smallBox"></div>
+				</div>
+				<div id="purple" class="box"></div>
+				<div class="clear"></div>
+			</div>
+			<div id="z3">
+				<div class="numBox">4</div>
+				<div id="a3-0" class="box"></div>
+				<div id="a3-1" class="box"></div>
+				<div id="a3-2" class="box"></div>
+				<div id="a3-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b3-0" class="smallBox"></div>
+					<div id="b3-1" class="smallBox"></div>
+					<div id="b3-2" class="smallBox"></div>
+					<div id="b3-3" class="smallBox"></div>
+				</div>
+				<div id="orange" class="box"></div>
+				<div class="clear"></div>
+			</div>
+			<div id="z2">
+				<div class="numBox">3</div>
+				<div id="a2-0" class="box"></div>
+				<div id="a2-1" class="box"></div>
+				<div id="a2-2" class="box"></div>
+				<div id="a2-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b2-0" class="smallBox"></div>
+					<div id="b2-1" class="smallBox"></div>
+					<div id="b2-2" class="smallBox"></div>
+					<div id="b2-3" class="smallBox"></div>
+				</div>
+				<div id="darkturquoise" class="box"></div>
+				<div class="clear"></div>
+			</div>
+			<div id="z1">
+				<div class="numBox">2</div>
+				<div id="a1-0" class="box"></div>
+				<div id="a1-1" class="box"></div>
+				<div id="a1-2" class="box"></div>
+				<div id="a1-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b1-0" class="smallBox"></div>
+					<div id="b1-1" class="smallBox"></div>
+					<div id="b1-2" class="smallBox"></div>
+					<div id="b1-3" class="smallBox"></div>
+				</div>
+				<div id="black" class="box"></div>
+				<div class="clear"></div>
+			</div>
+			<div id="z0">
+				<div class="numBox">1</div>
+				<div id="a0-0" class="box"></div>
+				<div id="a0-1" class="box"></div>
+				<div id="a0-2" class="box"></div>
+				<div id="a0-3" class="box"></div>
+				<div class="content-smallBox">
+					<div id="b0-0" class="smallBox"></div>
+					<div id="b0-1" class="smallBox"></div>
+					<div id="b0-2" class="smallBox"></div>
+					<div id="b0-3" class="smallBox"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="chrono">Temps : <span>00:00</span></div>
+			<button><a href="index.html">Retour au menu</a></button>
+			<button><a href="perdue.html">Solution</a></button>
+			<button><a href="#">Validez</a></button>
 		</div>
 		<!-- JS -->
 		<script src="files/index.js"></script>

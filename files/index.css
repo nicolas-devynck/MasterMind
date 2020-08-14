@@ -1,7 +1,12 @@
+/* General */
 body {
 	user-select: none;
     overflow: hidden;
 }
+h1 {
+	text-align: center;
+}
+.clear {clear: both;}
 /* Page Accueil */
 #accueil .logo {
 	width:100%;
@@ -9,6 +14,7 @@ body {
 }
 /* Page Regle */
 #regle {
+	text-align: justify;
 	font-size: 20px;
 }
 #regle .tokenRed {background-color:red;}
@@ -30,10 +36,8 @@ body {
 #jeu #orange {background-color:orange;margin-left: 10px;}
 #jeu #darkturquoise {background-color:darkturquoise;margin-left: 10px;}
 #jeu #black {background-color:black;margin-left: 10px;}
-#jeu .clear {clear: both;}
 #jeu .numBox {
 	width: 40px;
-    height: 40px;
 	margin: 1px;
 	margin-right: 10px;
 	border: 2px inset #AAA;
@@ -68,10 +72,50 @@ body {
     float: left;
 }
 #jeu #chrono {
+	font-size: 20px;
 	margin-top: 10px;
     width: 349px;
 	text-align : center;
 }
-/* page perdue */
+/* page scores */
+#scores .cell{
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	width: 33%;
+	line-height: 40px;
+	font-size: 20px;
+	border-left:2px solid #000;
+}
+#scores .borderRight{
+	border-right:2px solid #000;
+}
+#scores .borderBottom{
+	border-bottom:2px solid #000;
+}
+#scores .col{
+	border-top:2px solid #000;
+	background-color: #1b75bb;
+	color: #FFF;
+}
+#h9 .cell,#h7 .cell,#h5 .cell,#h3 .cell,#h1 .cell {
+	background-color: #E9E9E9;
+}
 
+/* page perdue */
+.content-sBox {
+	margin: auto;
+	text-align: center;
+	width: 100%; 
+	font-size: 20px;
+}
+.sBox {
+	width: 40px;
+	height: 40px;
+	margin: 1px;
+	margin-top: 20px;
+    border: 2px inset #AAA;
+    border-radius: 100%;
+    display: inline-block;
+}
 /* page gagner */

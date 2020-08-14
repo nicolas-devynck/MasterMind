@@ -19,34 +19,17 @@
 		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.min.css">
 		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.structure.min.css">
 		<link rel="stylesheet" type="text/css" href="JQuery/jquery-ui.theme.min.css">
-		<!-- JQuery Mobile -->
-		<script src="JQuery/jquery.mobile-1.4.5.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.structure-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.theme-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.inline-svg-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.inline-png-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.icons-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="JQuery/jquery.mobile.external-png-1.4.5.min.css">
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="files/index.css">
 	</head>
 	<body>
 		<!-- Page Accueil -->
-		<div data-role="page" id="accueil">
-			<div data-role="header" data-position="fixed"><h1>MasterMind</h1></div>
-			<div data-role="content">
-				<img class="logo" src="files/logo.png" alt="logo" />
-			</div>
-			<div data-role="footer" data-position="fixed">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="jeu.html" data-role="button" data-icon="grid" data-iconpos="top" data-iconshadow="true" data-transition="flip">Nouvelle partie</a></li>
-						<li><a href="scores.html" data-role="button" data-icon="star" data-iconpos="top" data-iconshadow="true" data-transition="turn">High Score</a></li>
-						<li><a href="regle.html" data-role="button" data-icon="info" data-iconpos="top" data-iconshadow="true" data-transition="pop">Régle du jeu</a></li>
-					</ul>
-				</div>
-			</div>
+		<div id="accueil">
+			<h1>MasterMind</h1>
+			<img class="logo" src="files/logo.png" alt="logo" />
+			<button><a href="jeu.html">Nouvelle partie</a></button>
+			<button><a href="scores.html">High Score</a></button>
+			<button><a href="regle.html">Régle du jeu</a></button>
 		</div>
 		<!-- JS -->
 		<script src="files/index.js"></script>
