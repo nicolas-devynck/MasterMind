@@ -25,22 +25,19 @@
 		<link rel="stylesheet" type="text/css" href="files/index.css">
 	</head>
 	<body>
-		<!-- Page Gagner -->
-		<div id="gagner">
-			<h1>You Win</h1>
-			<h2>Vous avez gagné !!</h2>
+		<!-- Page Regle -->
+		<div id="rule">
+			<h1>Régle du jeu</h1>
 			<p>
-				En <span id="minute"></span> minute(s) <span id="seconde"></span> seconde(s) et <span id="coup"></span> coup(s).<br/><br/>
+				L'ordinateur choisit une combinaison aléatoire de 4 pions parmi huit couleurs proposées. Le but du jeu ? les retrouver !<br /><br />
+				Déplacez les pions sur la grille puis vous validez en cliquant sur le bouton. L'ordinateur vous indiquera dans la colonne de droite si vous avez trouvé quelque chose.<br /><br />
+				Un pion <span class="tokenBlack"></span>
+				signifie qu'une des couleurs proposées est à sa place, un pion <span class="tokenRed"></span>
+				signifie qu'une des couleurs proposées existe dans la solution mais n'est pas à sa place.
 			</p>
 			<div class="button">
 				<form action="index.html"><button type="submit">Accueil</button></form>
-				<form action="jeu.html"><button type="submit">Jouez</button></form>
-				<form action="scores.html"><button type="submit">Scores</button></form>
 			</div>
 		</div>
-		<!-- Msg d'erreur -->
-		<div id="dialog" title="Erreur">Entre 2 et 10 caractères uniquement alphanumériques</div>
-		<!-- JS -->
-		<script src="files/gagner.js"></script>
-		</body>
+	</body>
 </html>

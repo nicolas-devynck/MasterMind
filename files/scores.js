@@ -1,11 +1,11 @@
 // 1800 seconde = 30 min
 // valeur par defaut
-var def = '["Dupont","1800"]';
+var reset = '["Dupont","1800"]';
 // verification et creation du stocage des scores
 if (!localStorage.getItem("high-scores")) { 
 	localStorage.setItem("high-scores", "1");
 	for(var i = 0; i < 10; i++) {
-		localStorage.setItem(i, def);
+		localStorage.setItem(i, reset);
 	}
 }
 // remise par defaut des valeur

@@ -9,9 +9,7 @@ h1 {
 	text-align: center;
 	color: #1b75bb;
 }
-h2 {
-	text-align: center;
-}
+h2 {text-align: center;}
 form {
 	margin: 0px;
 	padding: 0px;
@@ -19,7 +17,7 @@ form {
 }
 button {
 	font-size: 20px;
-	width: 110px;
+	width: 30%;
 	height: 60px;
 }
 .button {
@@ -32,18 +30,16 @@ button {
 }
 .clear {clear: both;}
 /* Page Accueil */
-#accueil .logo {
+#home .logo {
 	width:100%;
 	margin: auto;
 }
 /* Page Regle */
-#regle {
+#rule {
 	text-align: justify;
 	font-size: 20px;
 }
-#regle .tokenRed {background-color:red;}
-#regle .tokenBlack {background-color:black;}
-#regle .tokenRed, #regle .tokenBlack {
+#rule .tokenRed, #rule .tokenBlack {
 	display:inline-block;
 	width: 18px;
 	height: 18px;
@@ -51,16 +47,18 @@ button {
 	border-radius:100%;
 	border: 2px inset #AAA;
 }
+#rule .tokenRed {background-color:red;}
+#rule .tokenBlack {background-color:black;}
 /* page jeu */
-#jeu #red {	background-color:red;}
-#jeu #yellow {background-color:yellow;}
-#jeu #green {background-color:green;}
-#jeu #blue {background-color:blue;}
-#jeu #purple {background-color:purple;}
-#jeu #orange {background-color:orange;}
-#jeu #darkturquoise {background-color:darkturquoise;}
-#jeu #black {background-color:black;}
-#jeu .numBox {
+#game #red {	background-color:red;}
+#game #yellow {background-color:yellow;}
+#game #green {background-color:green;}
+#game #blue {background-color:blue;}
+#game #purple {background-color:purple;}
+#game #orange {background-color:orange;}
+#game #darkturquoise {background-color:darkturquoise;}
+#game #black {background-color:black;}
+#game .intBox {
 	width: 40px;
 	margin: 1px;
 	margin-right: 10px;
@@ -72,7 +70,7 @@ button {
 	line-height: 40px;
 	float: left;
 }
-#jeu .box {
+#game .box {
     width: 40px;
 	height: 40px;
 	margin: 1px;
@@ -81,14 +79,14 @@ button {
     border-radius: 100%;
     float: left;
 }
-#jeu .content-smallBox {
+#game .content-smallBox {
     width: 44px;
 	height: 44px;
 	margin-right: 10px;
 	margin-left: 10px;
     float: left;
 }
-#jeu .smallBox {
+#game .smallBox {
     width: 18px;
 	height: 18px;
 	background-color: #d8d8d8;
@@ -96,10 +94,10 @@ button {
     border-radius: 100%;
     float: left;
 }
-#jeu #chrono {
+#game #timer {
 	font-size: 20px;
 	margin-top: 10px;
-    width: 349px;
+    width: 100%;
 	text-align : center;
 }
 /* page scores */
@@ -112,43 +110,38 @@ button {
 	font-size: 20px;
 	border-left:2px solid #000;
 }
-#scores .borderRight{
-	border-right:2px solid #000;
-}
-#scores .borderBottom{
-	border-bottom:2px solid #000;
-}
+#scores .borderRight{border-right:2px solid #000;}
+#scores .borderBottom{border-bottom:2px solid #000;}
 #scores .col{
 	border-top:2px solid #000;
 	background-color: #1b75bb;
 	color: #FFF;
 }
-#h9 .cell,#h7 .cell,#h5 .cell,#h3 .cell,#h1 .cell {
-	background-color: #d8d8d8;
-}
-
+#h9 .cell,#h7 .cell,#h5 .cell,#h3 .cell,#h1 .cell {background-color: #d8d8d8;}
 /* page perdue */
-#perdue .content-sBox {
-	margin: auto;
+#lose p {
+	font-size: 20px;
+	text-align: center;
+}
+#lose .content-sBox {
+	margin-top: 20px;
 	text-align: center;
 	width: 100%; 
-	font-size: 20px;
 }
-#perdue .sBox {
+#lose .sBox {
 	width: 40px;
 	height: 40px;
 	margin: 1px;
-	margin-top: 20px;
     border: 2px inset #AAA;
     border-radius: 100%;
     display: inline-block;
 }
 /* page gagner */
-#gagner p {
+#win p {
 	text-align: center;
 	font-size: 20px;
 }
-#gagner input[type=text] {
+#win input[type=text] {
 	width: 250px;
 	font-size:20px;
 	height: 30px;
