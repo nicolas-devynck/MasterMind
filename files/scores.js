@@ -4,7 +4,7 @@ var def = '["Dupont","1800"]';
 // verification et creation du stocage des scores
 if (!localStorage.getItem("high-scores")) { 
 	localStorage.setItem("high-scores", "1");
-	for(var i = 0; i <= 9; i++) {
+	for(var i = 0; i < 10; i++) {
 		localStorage.setItem(i, def);
 	}
 }
@@ -14,7 +14,7 @@ $("#reset").click(function() {
 	location.reload();
 });
 // affichage des valeur dans la page html
-for(var i = 0; i <= 9; i++) {
+for(var i = 0; i < 10; i++) {
 	var nom = JSON.parse(localStorage.getItem(i))[0];
 	var minute = String(Math.floor(JSON.parse(localStorage.getItem(i))[1]/60));
 	var seconde = String(JSON.parse(localStorage.getItem(i))[1]%60);

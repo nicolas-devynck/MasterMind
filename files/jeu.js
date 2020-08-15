@@ -28,6 +28,9 @@ var randomColor = [
 	tabColor[Math.floor(Math.random() * 8)],
 	tabColor[Math.floor(Math.random() * 8)]
 ];
+for (var i = 0; i < 4; i++) {
+	sessionStorage.setItem("tokenColor"+i, randomColor[i]); // on stoque la solution dans une variable de session pour afficher la solution sur une autre page
+}
 console.log(randomColor);
 var ligne = 0; // variable qui donne la ligne actuel et le high score
 var tokenColor; // variable qui stocke la couleur du pion choisi
@@ -92,18 +95,13 @@ $("#submit").click(function () {
 		$("#b"+ligne+"-1").css("background-color") == "rgb(0, 0, 0)" &&
 		$("#b"+ligne+"-2").css("background-color") == "rgb(0, 0, 0)" &&
 		$("#b"+ligne+"-3").css("background-color") == "rgb(0, 0, 0)") {
-		sessionStorage.setItem("win", (ligne + 1)); // on stock le score dans une variable de session
-		// on stock le temps dans des variables de session
-		sessionStorage.setItem("Minute", (minute));
-		sessionStorage.setItem("seconde", (seconde));
-		document.location.href = "win.html" // et on redirige sur la page		
+		sessionStorage.setItem("ligne", ligne); // on stock le score dans une variable de session
+		sessionStorage.setItem("temps", minute*60+parseInt(seconde)); // on stock le temps dans des variables de session
+		document.location.href = "gagner.html" // et on redirige sur la page		
 	}
 	else {
 		if (ligne == 9) { // si le joueur est à la 10em lignes 
-			for (var i = 0; i < 4; i++) {
-				sessionStorage.setItem("over"+i, randomColor[i]); // on stoque la solution dans une variable de session pour afficher la solution sur une autre page
-			}
-			document.location.href = "over.html" // on redirige sur la page
+			document.location.href = "perdue.html"; // on redirige sur la page
 		}
 		else { // sinon on continue
 			ligne++; // on incrmente le conteur de ligne

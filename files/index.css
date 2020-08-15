@@ -3,8 +3,13 @@ html {height:100%;}
 body {
 	user-select: none;
 	overflow: hidden;
+	background-color: #E9E9E9;
 }
 h1 {
+	text-align: center;
+	color: #1b75bb;
+}
+h2 {
 	text-align: center;
 }
 .clear {clear: both;}
@@ -42,7 +47,7 @@ h1 {
 	margin: 1px;
 	margin-right: 10px;
 	border: 2px inset #AAA;
-	background-color: #E9E9E9;
+	background-color: #d8d8d8;
     border-radius: 100%;
 	font-size: 20px;
 	text-align : center;
@@ -53,7 +58,7 @@ h1 {
     width: 40px;
 	height: 40px;
 	margin: 1px;
-	background-color: #E9E9E9;
+	background-color: #d8d8d8;
     border: 2px inset #AAA;
     border-radius: 100%;
     float: left;
@@ -68,7 +73,7 @@ h1 {
 #jeu .smallBox {
     width: 18px;
 	height: 18px;
-	background-color: #E9E9E9;
+	background-color: #d8d8d8;
     border: 2px inset #AAA;
     border-radius: 100%;
     float: left;
@@ -101,7 +106,7 @@ h1 {
 	color: #FFF;
 }
 #h9 .cell,#h7 .cell,#h5 .cell,#h3 .cell,#h1 .cell {
-	background-color: #E9E9E9;
+	background-color: #d8d8d8;
 }
 
 /* page perdue */
@@ -121,3 +126,10 @@ h1 {
     display: inline-block;
 }
 /* page gagner */
+#gagner p {
+	text-align: center;
+	font-size: 20px;
+}
+#gagner input[type=text] {
+	width: 200px;
+}
