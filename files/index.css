@@ -1,7 +1,8 @@
 /* General */
+html {height:100%;}
 body {
 	user-select: none;
-    overflow: hidden;
+	overflow: hidden;
 }
 h1 {
 	text-align: center;
@@ -28,14 +29,14 @@ h1 {
 	border: 2px inset #AAA;
 }
 /* page jeu */
-#jeu #red {	background-color:red;margin-left: 10px;}
-#jeu #yellow {background-color:yellow;margin-left: 10px;}
-#jeu #green {background-color:green;margin-left: 10px;}
-#jeu #blue {background-color:blue;margin-left: 10px;}
-#jeu #purple {background-color:purple;margin-left: 10px;}
-#jeu #orange {background-color:orange;margin-left: 10px;}
-#jeu #darkturquoise {background-color:darkturquoise;margin-left: 10px;}
-#jeu #black {background-color:black;margin-left: 10px;}
+#jeu #red {	background-color:red;}
+#jeu #yellow {background-color:yellow;}
+#jeu #green {background-color:green;}
+#jeu #blue {background-color:blue;}
+#jeu #purple {background-color:purple;}
+#jeu #orange {background-color:orange;}
+#jeu #darkturquoise {background-color:darkturquoise;}
+#jeu #black {background-color:black;}
 #jeu .numBox {
 	width: 40px;
 	margin: 1px;
@@ -60,6 +61,7 @@ h1 {
 #jeu .content-smallBox {
     width: 44px;
 	height: 44px;
+	margin-right: 10px;
 	margin-left: 10px;
     float: left;
 }
