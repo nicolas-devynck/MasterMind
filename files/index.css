@@ -146,3 +146,8 @@ button {
 	font-size:20px;
 	height: 30px;
 }
+#win canvas {
+	position: fixed;
+	top: 0;
+	z-index: -1;
+}
