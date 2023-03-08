@@ -1,3 +1,4 @@
+//conpteur
 var second = 0; // conteur seconde
 var minute = 0; // conteur minute
 setInterval(function () { // toute les 1000 miliseconde (toute les seconde)
@@ -31,7 +32,7 @@ var randomColor = [
 for (var i = 0; i < 4; i++) {
 	sessionStorage.setItem("tokenColor"+i, randomColor[i]); // on stoque la solution dans une variable de session pour afficher la solution sur une autre page
 }
-console.log(randomColor);
+console.log(randomColor); // solution en console
 var row = 0; // variable qui donne la ligne actuel et le high score
 var tokenColor; // variable qui stocke la couleur du pion choisi
 // tableau de boolean pour valider les couleur
