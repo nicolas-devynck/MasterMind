@@ -2,11 +2,14 @@
 var minute = String(Math.floor(sessionStorage.getItem("time")/60));
 var second = String(sessionStorage.getItem("time")%60);
 if (second.length == 1) {second = "0"+second;}
-$("#dialog").dialog({autoOpen:false});
+// todo ajouté un bouton ok et changer la cloueur du titre
+$("#dialog").dialog({
+	autoOpen:false
+});
 $("#minute").html(minute);
 $("#second").html(second);
 $("#hit").html((parseInt(sessionStorage.getItem("row"))+1));
-
+// todo ajouté un bouton validé 
 // comparaison des chrono et affichage de l'input
 if (parseInt(sessionStorage.getItem("time")) < parseInt(JSON.parse(localStorage.getItem(sessionStorage.getItem("row")))[1])) {
     $("p").append("Entrez votre nom : <br /><input type='text' id='input' placeholder='Alphanumérique seulement' />");

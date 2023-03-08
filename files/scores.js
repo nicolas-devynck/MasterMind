@@ -9,6 +9,7 @@ if (!localStorage.getItem("high-scores")) {
 	}
 }
 // remise par defaut des valeur
+//ajouté une boite de dialogue de confirmation
 $("#reset").click(function() {
 	localStorage.removeItem('high-scores');
 	location.reload();
