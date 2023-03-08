@@ -36,6 +36,7 @@ console.log(randomColor); // solution en console
 var row = 0; // variable qui donne la ligne actuel et le high score
 var tokenColor; // variable qui stocke la couleur du pion choisi
 // tableau de boolean pour valider les couleur
+// todo fair un truc plus clair avec les check
 var Check = [false, false, false, false];
 var Check2 = [false, false, false, false];
 $("#red, #yellow, #green, #blue, #purple, #black, #orange, #darkturquoise").draggable({ revert: true,containment: "html" });  // rend les pions draggable
@@ -49,6 +50,7 @@ function fRow(idRow) {
 			}
 		});
 		//change la couleur des bordure
+		//todo, sortir la couleur du scrip
 		$("#a"+idRow+"-0, #a"+idRow+"-1, #a"+idRow+"-2, #a"+idRow+"-3").css('border-color', "#1b75bb");
 		$("#b"+idRow+"-0, #b"+idRow+"-1, #b"+idRow+"-2, #b"+idRow+"-3").css('border-color', "#1b75bb");
 		$("#z"+idRow+" .intBox").css('background-color', "#1b75bb");
@@ -59,6 +61,7 @@ function fRow(idRow) {
 // bouton valider
 $("#submit").click(function () {
 	// boucle pour les pion noir
+	// todo metre les token noir et rouge dans les emplacement aleatoire
 	for (var i = 0; i < 4; i++) {
 		// si la coleur et l'emplacement et bon
 		if ($("#a"+row+"-"+i+"").css("background-color") == randomColor[i]) {
