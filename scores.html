@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<title>MasterMind</title>
-		<!-- securiter -->
+		 <!-- sécurité -->
 		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
 		<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
 		<!-- viewport -->
@@ -27,7 +27,7 @@
 	<body>
 		<!-- Page Scores -->
 		<div id="scores">
-			<h1>High Score</h1>
+			<h1>High Scores</h1>
 			<div id="h">
 				<div class="cell borderBottom col">Nom</div>
 				<div class="cell borderBottom col">Temps</div>
@@ -96,9 +96,10 @@
 			</div>
 			<div class="button">
 				<form action="index.html"><button type="submit">Accueil</button></form>
-				<button id="reset">Reset</button>
+				<form action="#"><button id="reset" type="button">Reset</button></form>
 			</div>
 		</div>
+		<div id="dialog-confirm" title="Réinitialiser les scores ?">Voulez-vous vraiment réinitialiser les scores ?</div>
 		<!-- JS -->
 		<script src="files/scores.js"></script>
 	</body>

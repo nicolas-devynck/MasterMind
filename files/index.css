@@ -15,7 +15,7 @@ form {
 	padding: 0px;
 	display: inline;
 }
-button {
+form button {
 	font-size: 20px;
 	width: 30%;
 	height: 60px;
@@ -119,6 +119,25 @@ button {
 }
 #h9 .cell,#h7 .cell,#h5 .cell,#h3 .cell,#h1 .cell {background-color: #d8d8d8;}
 /* page perdue */
+/* effet pluie */
+.rain-drop {
+  position: fixed;
+  top: -30px;
+  pointer-events: none;
+  z-index: 9999;
+  animation-name: rain-fall;
+  animation-timing-function: linear;
+  /* Forme goutte très accentuée */
+  border-radius: 50% 50% 80% 80% / 10% 10% 100% 100%;
+  background: linear-gradient(to bottom, #b3e0fc 0%, #3498db 80%);
+  box-shadow: 0 2px 8px 0 rgba(52,152,219,0.2);
+}
+@keyframes rain-fall {
+  to {
+    top: 110vh;
+    opacity: 0.1;
+  }
+}
 #lose p {
 	font-size: 20px;
 	text-align: center;

@@ -23,13 +23,13 @@
 		<link rel="stylesheet" type="text/css" href="files/index.css">
 	</head>
 	<body>
-		<!-- Page Gagner -->
+		<!-- Page Gagné -->
 		<div id="win">
 			<canvas id="canvas"><div></div></canvas>
 			<h1>You Win</h1>
 			<h2>Vous avez gagné !!</h2>
 			<p>
-				En <span id="minute"></span> minute(s) <span id="second"></span> seconde(s) et <span id="hit"></span> coup(s).<br/><br/>
+				En <span id="minute"></span> minute(s), <span id="second"></span> seconde(s) et <span id="hit"></span> coup(s).<br><br>
 			</p>
 			<div class="button">
 				<form action="index.html"><button type="submit">Accueil</button></form>
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<!-- Msg d'erreur -->
-		<div id="dialog" title="Erreur">Entre 2 et 10 caractères uniquement alphanumériques</div>
+		<div id="dialog" title="Erreur" aria-live="polite">Entre 2 et 10 caractères uniquement alphanumériques</div>
 		<!-- JS -->
 		<script src="files/win.js"></script>
 		<script src="files/confetti.js"></script>	

@@ -1,20 +1,40 @@
-// 1800 seconde = 30 min
-// valeur par defaut
+// 1800 secondes = 30 min
+// valeur par défaut
 var reset = '["Dupont","1800"]';
-// verification et creation du stocage des scores
+// Vérification et création du stockage des scores
 if (!localStorage.getItem("high-scores")) { 
 	localStorage.setItem("high-scores", "1");
 	for(var i = 0; i < 10; i++) {
 		localStorage.setItem(i, reset);
 	}
 }
-// remise par defaut des valeur
-//ajouté une boite de dialogue de confirmation
-$("#reset").click(function() {
-	localStorage.removeItem('high-scores');
-	location.reload();
+$("#dialog-confirm").dialog({
+	autoOpen:false
 });
-// affichage des valeur dans la page html
+// Remise par défaut des valeurs avec confirmation
+$("#reset").click(function() {
+  $("#dialog-confirm").dialog({
+    resizable: false,
+    height: "auto",
+    width: 350,
+    modal: true,
+    buttons: {
+      "Oui": function() {
+        localStorage.removeItem('high-scores');
+        for (var i = 0; i < 10; i++) {
+          localStorage.setItem(i, reset);
+        }
+        $(this).dialog("close");
+        location.reload();
+      },
+      "Non": function() {
+        $(this).dialog("close");
+      }
+    }
+  });
+  $("#dialog-confirm").dialog("open");
+});
+// Affichage des valeurs dans la page HTML
 for(var i = 0; i < 10; i++) {
 	var nom = JSON.parse(localStorage.getItem(i))[0];
 	var minute = String(Math.floor(JSON.parse(localStorage.getItem(i))[1]/60));
